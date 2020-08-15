@@ -1,0 +1,31 @@
+{{define "base"}}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>{{template "title" .}} - Storybox</title>
+        <!-- Link to the CSS and favicon !-->
+        <link rel="stylesheet" href="/static/css/main.css" type="text/css" />
+        <link rel="shortcut" href="/static/img/favicon.ico" type="image/x-xcf" />
+
+        <!-- Ubuntu mono font -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <h1><a href='/'>Storybox</a></h1>
+        </header>
+        <nav>
+            <a href='/'>Home</a>
+        </nav>
+        <section>
+            {{template "body" .}}
+        </section>
+        {{template "footer" .}}
+        <!-- And include the JavaScript file -->
+        <script src="/static/js/main.js" type="text/javascript"></script> </body>
+</html>
+{{end}}
